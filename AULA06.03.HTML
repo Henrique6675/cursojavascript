@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <script>
+
+        var num = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+
+        var soma = 0 
+
+        for (var i = 0; i < num.length; i++) {
+
+            console.log(num[i]);
+
+            if (!isNaN(num[i]) && num[i] % 2 === 0) {
+
+                soma += num[i] ;
+
+            }
+        }
+
+        alert('a soma dos numeros pares é: ' + soma)
+
+    </script>
+</body>
+
+</html>

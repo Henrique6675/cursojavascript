@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Jogo do PAR ou IMPAR</h1>
+    <p>digite um numero de 0 a 5
+        <input type="number" id="meuNumero" min="0" max="5"></p>
+
+        <label><input type="radio" name="opcao" value="par" checked>Par</label><br>
+        <label><input type="radio" name="opcao" value="impar">Impar</label><br><br>
+
+    <button onclick="jogar()">jogar</button>
+    <div id="output"></div>
+
+    <script>
+
+        var nComputador = ''
+
+        var nJogador = ''
+
+        var minhaEscolha = ''
+
+        function sortear(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function jogar() {
+
+            nComputador = sortear(5);
+            nJogador = document.getElementById('meuNumero').value
+
+            minhaEscolha = document.querySelector('input[type="radio"]:checked').value
+
+            if (!nJogador) {
+
+                alert('É necessario digitar algum número de 0 a 5')
+                return
+            }
+
+            nJogador = parseInt(nJogador)
+
+            var total = nJogador + nComputador
+
+            if ((nJogador + nComputador) % 2 === 0) {
+                var resultado = 'par'
+            } else {
+                resultado = 'impar'
+            }
+
+            if (minhaEscolha === resultado) {
+                alert('você venceu')
+
+            } else {
+                alert('você perdeu')
+
+            }
+
+            var output = document.getElementById('output').innerHTML = '<br>Seu Numero: ' + nJogador + '<br><br>' + 'Numero do Computador: ' + nComputador + '<br><br>' + 'Soma dos Numeros: ' + total + '<br><br>' + total + ' é: ' + resultado
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

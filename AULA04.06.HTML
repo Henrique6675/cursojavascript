@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <button onclick="calc('+')">somar</button>
+    <button onclick="calc('-')">subirair</button>
+    <button onclick="calc('*')">multiplicar</button>
+    <button onclick="calc('/')">dividir</button>
+    <button onclick="dele()">deletar</button>
+
+    <div id="output"></div>
+    <script>
+
+        var n1 = prompt('digite um número');
+        var n1 = parseFloat(n1);
+
+        res()
+
+        function res() {
+            var output = document.getElementById('output');
+            output.innerHTML = n1;
+        }
+
+        function calc(sim) {
+            var n2 = prompt('digite outro numero')
+            var n2 = parseFloat(n2)
+
+            if (sim === '+') {
+
+                n1 += n2
+
+                res()
+            }
+
+            if (sim === '-') {
+
+                n1 -= n2
+
+                res()
+            }
+
+            if (sim === '*') {
+
+                n1 *= n2
+
+                res()
+            }
+
+            if (sim === '/') {
+
+                n1 /= n2
+
+                res()
+            }
+        }
+
+        function dele() {
+
+            msg = ''
+
+            output.innerHTML = msg;
+        }
+
+
+    </script>
+</body>
+
+</html>

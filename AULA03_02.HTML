@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+    <script>
+            
+            var n1 = prompt("digite um número");
+        n1 = parseFloat(n1);
+
+        var mult = 1;
+        var dezena = 11;
+
+        while (mult && dezena <= 1000) {
+            document.write(n1 + " x " + mult + " = " + (n1 * mult) + "<br>");
+
+            mult = mult + 1;
+
+            while (dezena <= mult) {
+                document.write("<hr>")
+
+                dezena = dezena + 10
+            }
+
+        } document.write("fim do loop !!!");
+
+       
+
+    </script>
+</body>
+
+</html> 

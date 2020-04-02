@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>loteria</h1>
+    <button onclick="sortearn()">Sortear 6 Numeros</button>
+    <div id="output"></div>
+
+    <script>
+
+        var output = document.getElementById('output');
+        var msg = ''
+
+        msg += '<p>numeros sorteados: </p>'
+        msg += '<p> ' + sorteados
+
+        meusNumeros = [44, 32, 60, 21, 49, 15]
+
+        for (var i = 0; 1 < meusNumeros.length; i++) {
+            msg += '<p>' + meusNumeros[i] + ': ';
+
+            if (sorteados.indexOf(meusNumeros[i]) === -1) {
+
+                msg += 'errou'
+            } else {
+                msg += 'acertou'
+            }
+            msg += '</p>'
+        }
+        output.innerHTML = msg
+
+        function sortearn() {
+
+            function sortear() {
+                return Math.floor(Math.random() * 60);
+            }
+
+            var sorteados = [];
+
+            while (sorteados.length < 6) {
+                var sorteado = sortear();
+                if (sorteados.indexOf(sorteado) === -1) {
+                    sorteados[sorteados.length] = sorteado;
+                }
+                console.log(sorteados.length, sorteado)
+            }
+
+            var output = document.getElementById('output').innerHTML = sorteados
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

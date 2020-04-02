@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+    <h1>Logica de programação javascript</h1>
+
+    <div id="output"></div>
+
+    <script>
+
+        var produtos = new Array('lapiz', 'caneta', 'borracha', 'apontador', 'regua', 'grampeador')
+
+        var output = document.getElementById('output')
+        var i = 0
+
+        var msg = ''
+
+        produtos.push('compasso', 'cola')
+
+        while (i < produtos.length) {
+
+            msg += 'produto ' + (i + 1) + ' : ' + produtos[i] + '<br>';
+
+            i++
+        }
+
+
+        output.innerHTML = msg
+
+    </script>
+</body>
+
+</html>

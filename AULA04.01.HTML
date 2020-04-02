@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+    <!-- cria div para conectar-se com o javascript -->
+    <div id="output"></div>
+
+    <script>
+        //conecta javascript com html
+        var output = document.querySelector('#output');
+
+        var menssagem = '';
+
+        var i = 0;
+
+        while (i <= 1000) {
+
+            menssagem += 'i: ' + i + '<br>';
+
+            i++;
+        }
+        //subs document.write
+        output.innerHTML = menssagem;
+        //deixa-o visivel e alteravel no browser
+        console.log(output);
+
+    </script> 
+</body>
+
+</html>

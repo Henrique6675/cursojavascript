@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <button onclick="rtab()">resultado</button>
+    <button onclick="dtab()">delete</button>
+
+    <!-- cria div para conectar-se com o javascript -->
+    <div id="output"></div>
+
+    <script>
+        //conecta javascript com html
+
+        var output = document.querySelector('#output');
+
+        // var output = document.getElementById('output');
+        var msg = '';
+
+        var i = 0;
+
+        function rtab() {
+
+            var n = prompt("digite um numero")
+            n = parseFloat(n)
+
+            while (i <= 1000) {
+
+                msg += n + 'x' + i + '=' + n * i + '<br>';
+
+                console.log(msg);
+
+                i++;
+            }
+            //subs document.write
+            output.innerHTML = msg;
+
+            i = 0;
+        }
+
+        function dtab() {
+
+            var output = document.querySelector('#output');
+
+            msg = '';
+
+            output.innerHTML = msg;
+            //deixa-o visivel e alteravel no browser
+            console.log(msg);
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <button onclick="iniciarcalc('+')">somar</button>
+    <button onclick="iniciarcalc('-')">subitrair</button>
+    <button onclick="iniciarcalc('*')">multiplicar</button>
+    <button onclick="iniciarcalc('/')">dividir</button>
+
+    <div id="output"></div>
+    <script>
+
+        var n2 = prompt('digite um número')
+        n2 = parseFloat(n2)
+
+        escreve(n2);
+
+        function iniciarcalc(simbolo) {
+            var n1 = document.getElementById('output').textContent;
+            n1 = parseFloat(n1)
+
+            var n2 = prompt('digite outro número')
+            n2 = parseFloat(n2)
+
+            var msg = calc(simbolo, n1, n2)
+
+            escreve(msg)
+        }
+
+        function escreve(menssagem) {
+            document.getElementById('output').innerHTML = menssagem
+        }
+
+        function calc(simbolo, n1, n2) {
+
+            var numerocalc = null;
+
+
+            switch (simbolo) {
+                case '+':
+                    numerocalc = n1 + n2;
+                    break;
+                case '-':
+                    numerocalc = n1 - n2
+                    break
+                case '*':
+                    numerocalc = n1 * n2
+                    break
+                case '/':
+                    numerocalc = n1 / n2
+
+            }
+
+            return numerocalc
+
+        }
+
+    </script>
+</body>
+
+</html>

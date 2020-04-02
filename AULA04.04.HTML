@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <button onclick="soma()">somar</button>
+    <button onclick="subi()">subirair</button>
+    <button onclick="mult()">multiplicar</button>
+    <button onclick="divi()">dividir</button>
+    <button onclick="dele()">deletar</button>
+
+    <div id="output"></div>
+    <script>
+
+        var output = document.getElementById('output');
+
+        var msg = '';
+
+        function soma() {
+
+            var n1 = prompt('digite um numero');
+            n1 = parseFloat(n1);
+
+            var n2 = prompt('digite um numero');
+            n2 = parseFloat(n2);
+
+            var r1 = n1 + n2
+
+            msg += r1 + '<br>';
+
+            output.innerHTML = msg;
+        }
+
+        function subi() {
+
+            var n3 = prompt('digite um numero');
+            n3 = parseFloat(n3);
+
+            var n4 = prompt('digite um numero');
+            n4 = parseFloat(n4);
+
+            var r2 = n3 - n4
+
+            msg += r2 + '<br>';
+
+            output.innerHTML = msg;
+        }
+
+        function mult() {
+
+            var n5 = prompt('digite um numero');
+            n5 = parseFloat(n5);
+
+            var n6 = prompt('digite um numero');
+            n6 = parseFloat(n6);
+
+            var r3 = n5 * n6
+
+            msg += r3 + '<br>';
+
+            output.innerHTML = msg;
+        }
+
+        function divi() {
+
+            var n7 = prompt('digite um numero');
+            n7 = parseFloat(n7);
+
+            var n8 = prompt('digite um numero');
+            n8 = parseFloat(n8);
+
+            var r4 = n7 * n8
+
+            msg += r4 + '<br>';
+
+            output.innerHTML = msg;
+        }
+
+        function dele(){
+
+            msg = ''
+
+            output.innerHTML = msg;
+        }
+
+
+    </script>
+</body>
+
+</html>

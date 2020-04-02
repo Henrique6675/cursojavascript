@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+    <button onclick="areale()">Mostrar a área em um alert</button>
+    <button onclick="areaout()">Mostrar a área no output</button>
+    <div id="output"></div>
+
+    <script>
+
+
+
+        var l = prompt('digite a largura');
+        l = parseFloat(l);
+
+        var a = prompt('digite a altura');
+        a = parseFloat(a);
+
+        function areale() {
+
+            var area = calc(l, a)
+
+            alert('á aréa total é: ' + area)
+
+        }
+
+        function areaout() {
+
+            var area = calc(l, a)
+
+            document.getElementById('output').innerHTML = 'á aréa total é: ' + area
+
+        }
+
+        if (isNaN(l) || isNaN(a)) {
+            throw new Error('apenas números !')
+
+        }
+
+        if (l === undefined || a === undefined) {
+            throw new Error('digite algo !')
+        }
+
+        try {
+            calc(l, a)
+        } catch (e) {
+            alert = e
+        }
+        
+        function calc(l, a) {
+            return l * a
+        }
+
+
+    </script>
+</body>
+
+</html>

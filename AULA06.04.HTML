@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <script>
+
+        var output = document.getElementById('output')
+
+        var msg = ''
+
+        var lapiz = new Object
+
+        lapiz.nome = 'lapiz'
+
+        lapiz.preco = '2,50'
+
+        lapiz.estoque = '50'
+
+        msg += ('Nome: ' + lapiz.nome + '<br>')
+
+        msg += ('Preço: ' + lapiz.preco + '<br>')
+
+        msg += ('Estoque: ' + lapiz.estoque + '<br>')
+
+        output.innerHTML = msg
+
+    </script>
+</body>
+
+</html>

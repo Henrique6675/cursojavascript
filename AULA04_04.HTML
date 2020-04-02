@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <button onclick="soma()">somar</button>
+    <button onclick="subitração()">subitração</button>
+    <button onclick="multipicação()">multipicação</button>
+    <button onclick="divisão()">divisão</button>
+    <button onclick="deletar()">«delletar</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        var n1 = prompt('digite um número');
+        n1 = parseFloat(n1);
+
+        var msg = n1
+
+        escreve();
+
+        function escreve() {
+            document.getElementById('output').innerHTML = msg;
+        }
+
+        function soma() {
+            var n2 = prompt('digite outro número');
+            n2 = parseFloat(n2)
+
+            msg = n1 += n2
+
+            escreve()
+        }
+
+        function subitração() {
+            var n2 = prompt('digite outro número');
+            n2 = parseFloat(n2)
+
+            msg = n1 -= n2
+
+            escreve()
+        }
+
+        function multipicação() {
+            var n2 = prompt('digite outro número');
+            n2 = parseFloat(n2)
+
+            msg = n1 *= n2
+
+            escreve()
+        }
+
+        function divisão() {
+            var n2 = prompt('digite outro número');
+            n2 = parseFloat(n2)
+
+            msg = n1 /= n2
+
+            escreve()
+        }
+
+        function deletar() {
+            msg = ''
+
+            escreve()
+        }
+
+
+    </script>
+</body>
+
+</html>

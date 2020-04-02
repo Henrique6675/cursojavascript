@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação javascript</title>
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <script>
+
+        var i = 0
+
+        var msg = ''
+
+        var u = [
+            { nome: 'Gabriel Almeida Costa', gmail: 'Gabriel.almeida@gmail.com' },
+            { nome: 'Pedro Barbosa Ferreira', gmail: 'pedrinhobarfegk@gmail.com' },
+            { nome: 'Erick Freitas Junior', gmail: 'Erickferitas@gmail.com' }
+        ]
+
+        while (i < u.length) {
+
+            msg += 'Nome: ' + u[i].nome + '<br> Gmail: ' + u[i].gmail + '<p> <br>'
+
+            i++
+        }
+
+        var output = document.getElementById('output').innerHTML = msg
+
+    </script>
+</body>
+
+</html>
