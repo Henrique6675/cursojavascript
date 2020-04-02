@@ -10,7 +10,7 @@ git remote add origin https://github.com/Henrique6675/cursojavascript.git
 
 git push -u origin master
 ```
-##comandos para salvar quando o repositorio existe
+## comandos para salvar quando o repositorio existe
 ```
 git status
 git add .
