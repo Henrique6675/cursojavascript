@@ -1,3 +1,6 @@
+# comandos do git
+
+
 git status
 git add .
 git commit -m "um texto"
