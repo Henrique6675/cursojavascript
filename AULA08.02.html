@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Lógica de programação com Javascript</title>
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <div id="output"></div>
+
+
+    <script>
+
+        function endereco(log, n, cep) {
+
+            this.logradouro = log
+            this.n = n
+            this.cep = cep
+
+            this.enderecocompleto = function(){
+                return this.logradouro + ', ' + this.n + ', ' + this.cep;
+            }
+        }
+
+        var endereco1 = new endereco('rua alfredo',3,13243-673760)
+        var endereco2 = new endereco('rua joao',709,41239-423673)
+
+        console.log(endereco1.enderecocompleto())
+        console.log(endereco2.enderecocompleto())
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

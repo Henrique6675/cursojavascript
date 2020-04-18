@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Lógica de programação com Javascript</title>
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <div id="output"></div>
+
+
+    <script>
+        //matriz
+        var alunos = [
+            { nome: 'Henrique', notas: [2, 5, 8, 9] },
+            { nome: 'Matheus', notas: [2, 1, 5, 8] },
+            { nome: 'Igor', notas: [1, 5, 3, 2] },
+            { nome: 'Thiago', notas: [4, 5, 3, 8] },
+            { nome: 'Miguel', notas: [2, 1, 8, 5] }
+        ];
+        var msg = "";
+        var totalbim = 0
+        var mediabim = 0
+        var total = 0
+
+        for (var i = 0; i < alunos.length; i++) {
+
+            msg += '<p>' + alunos[i]['nome'] + '<br> notas: ' + alunos[i]['notas'].join(', ')
+
+            console.log(alunos[i])
+
+            totalbim = 0
+
+            for (var j = 0; j < alunos[i]['notas'].length; j++) {
+
+                console.log(alunos[i]['notas'][j])
+
+                totalbim += alunos[i]['notas'][j]
+
+                mediabim = totalbim / 4
+
+                total += alunos[i]['notas'][j] / 4
+
+            }
+            msg += '<br>media: ' + mediabim + '<hr>'
+
+        }
+
+        msg += '<br>media mista: ' + total
+
+        var output = document.getElementById('output').innerHTML = msg;
+
+
+    </script>
+
+</body>
+
+</html>
