@@ -48,16 +48,19 @@
             { nome: 'ana', id: 114555, endereco: new Endereco({ logradouro: 'Av belezura', n: 41, estado: 'SP', cep: '555555-555' }) },
         ];
 
-
         var enderecos = [];
         var msg = "";
 
         for (var i = 0; i < alunos.length; i++) {
 
             enderecos[i] = alunos[i].endereco;
+
         }
 
-        
+        enderecos[1].estado = 'SP'
+        enderecos[2].estado = 'SP'
+        enderecos[3].cidade = 'Rio de Janeiro'
+        enderecos[4].cidade = 'São Paulo'
 
         console.log(enderecos);
 
@@ -66,8 +69,6 @@
             var endereco = enderecos[i];
 
             for (prop in endereco) {
-                console.log(prop);
-                console.log(endereco[prop]);
 
                 if (endereco[prop]) {
                     msg += 'i: ' + i + ', ' + prop + ': ' + endereco[prop] + '<br>';
