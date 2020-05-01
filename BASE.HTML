@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Lógica de programação com Javascript</title>
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <script>
+
+        function testesalto() {
+
+            for (i = 0; i < 10; i++) {
+
+                if (i === 5) {
+                    return 'fim da função'      //Sai da finção e retorna o valor
+                }
+                console.log(i)
+            }
+        }
+        var teste = testesalto()
+        console.log(teste)
+        console.log('-------')
+
+        function testesalto2() {
+
+            for (i = 0; i < 10; i++) {
+
+                if (i === 5) {
+                    continue;                   //Pula o loop e continua a partir da proxima interação
+                }
+                console.log(i)
+            }
+        }
+        var teste2 = testesalto2()
+        console.log(teste2)
+        console.log('-------')
+
+        function testesalto3() {
+
+            for (i = 0; i < 10; i++) {
+
+                if (i === 5) {
+                    break;                     //Sai do loop e continua a execução da função
+                }
+                console.log(i)
+            }
+        }
+        var teste3 = testesalto3()
+        console.log(teste3)
+        
+
+    </script>
+
+</body>
+
+</html>
